@@ -1,0 +1,192 @@
+/* Registration Page */
+.register-page {
+  min-height: 100vh;
+  background: #eef8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Registration Card */
+.register-card {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(23, 105, 170, 0.12);
+  box-sizing: border-box;
+}
+
+/* Header */
+.register-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.register-icon {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.register-header h1 {
+  color: #123b5d;
+  font-size: 25px;
+  margin: 0 0 6px;
+}
+
+.register-header p {
+  color: #777777;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Registration Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #345;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d5e2eb;
+  border-radius: 7px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  background: #ffffff;
+  color: #243746;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1769aa;
+  box-shadow: 0 0 0 2px rgba(23, 105, 170, 0.08);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 55px;
+}
+
+/* Create Account Button */
+.register-btn {
+  width: 100%;
+  margin-top: 4px;
+  padding: 11px;
+  border: none;
+  border-radius: 7px;
+  background: #1769aa;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.register-btn:hover {
+  background: #12578e;
+}
+
+/* Login Text */
+.login-text {
+  text-align: center;
+  margin: 16px 0 0;
+  color: #777777;
+  font-size: 14px;
+}
+
+/* Login Link - Dark Blue */
+.register-card .login-text .login-link {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-left: 4px;
+  color: #003366;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.register-card .login-text .login-link:hover {
+  color: #001f40;
+  text-decoration: underline;
+}
+
+.register-card .login-text .login-link:focus,
+.register-card .login-text .login-link:active {
+  color: #003366;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 650px) {
+  .register-page {
+    align-items: flex-start;
+    padding: 20px 12px;
+  }
+
+  .register-card {
+    max-width: 450px;
+    padding: 22px 18px;
+    border-radius: 12px;
+  }
+
+  .register-header h1 {
+    font-size: 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 360px) {
+  .register-card {
+    padding: 18px 14px;
+  }
+
+  .register-header h1 {
+    font-size: 20px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 13px;
+  }
+}

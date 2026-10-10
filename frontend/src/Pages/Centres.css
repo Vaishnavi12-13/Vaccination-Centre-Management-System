@@ -1,0 +1,1550 @@
+/* =========================================
+   VACCINATION CENTRE MANAGEMENT SYSTEM
+   CENTRES PAGE - COMPLETE RESPONSIVE CSS
+========================================= */
+
+/* Global page layout */
+.centres-page {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #12345a;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.centres-page *,
+.centres-page *::before,
+.centres-page *::after {
+  box-sizing: border-box;
+}
+
+.centres-page h1,
+.centres-page h2,
+.centres-page h3,
+.centres-page h4,
+.centres-page p {
+  overflow-wrap: break-word;
+}
+
+.centres-page button,
+.centres-page input,
+.centres-page select {
+  font-family: inherit;
+}
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+.centres-page .centres-navbar {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  height: auto;
+
+  margin: 0;
+  padding: 15px 5%;
+
+  gap: 25px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e4edf7;
+  box-shadow: 0 2px 12px rgba(20, 60, 100, 0.04);
+}
+
+/* Logo container */
+.centres-page .centres-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 55%;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  color: #123976;
+}
+
+/* Logo icon */
+.centres-page .logo-shield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 45px;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  background: #0870f9;
+  color: #ffffff;
+
+  font-size: 27px;
+  font-weight: bold;
+}
+
+/* Logo text */
+.centres-page .logo-text {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.centres-page .logo-text h2 {
+  margin: 0;
+  padding: 0;
+
+  color: #123976;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Navigation links */
+.centres-page .home-nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  flex: 0 0 auto;
+
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  gap: clamp(18px, 2.5vw, 36px);
+
+  flex-wrap: nowrap;
+}
+
+/* Individual navigation links */
+.centres-page .home-nav-links a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 45px;
+  padding: 8px 0;
+
+  color: #092650;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1.4;
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+/* Navigation hover */
+.centres-page .home-nav-links a:hover {
+  color: #0870f9;
+}
+
+/* Active navigation link */
+.centres-page .home-nav-links a.active {
+  color: #0870f9;
+}
+
+.centres-page .home-nav-links a.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3px;
+
+  border-radius: 3px;
+  background: #0870f9;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.centres-page .centres-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 100%;
+  min-height: 360px;
+
+  margin: 0;
+  padding: 65px 24px;
+
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #eaf6ff 0%,
+    #f5faff 55%,
+    #ffffff 100%
+  );
+
+  border-bottom: 1px solid #e1edf8;
+}
+
+/* Hero eyebrow */
+.centres-page .centres-eyebrow {
+  display: block;
+
+  margin: 0 0 12px;
+  padding: 0;
+
+  color: #0870f9;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+/* Hero heading */
+.centres-page .centres-hero h1 {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 8px 0 18px;
+  padding: 0;
+
+  color: #123976;
+
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 800;
+
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+/* Hero paragraph */
+.centres-page .centres-hero p {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  color: #526d8b;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.8;
+}
+
+/* Hero badge */
+.centres-page .centres-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 100%;
+
+  margin: 24px 0 0;
+  padding: 11px 18px;
+
+  border: 1px solid #cfe5fb;
+  border-radius: 30px;
+
+  background: #ffffff;
+  color: #35628f;
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.centres-page .centres-main {
+  display: block;
+
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+  padding: 45px 30px 65px;
+}
+
+/* =========================================
+   SEARCH AND FILTER PANEL
+========================================= */
+
+.centres-page .centres-search-panel {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 1fr);
+
+  align-items: end;
+
+  width: 100%;
+  max-width: 100%;
+
+  gap: 22px;
+
+  margin: 0;
+  padding: 25px;
+
+  border: 1px solid #e0edf9;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 22px rgba(24, 73, 120, 0.05);
+}
+
+/* Search field wrapper */
+.centres-page .centres-search-field {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* Search labels */
+.centres-page .centres-search-field label {
+  display: block;
+
+  margin: 0 0 10px;
+  padding: 0;
+
+  color: #173c5c;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+/* Search input and select */
+.centres-page .centres-search-field input,
+.centres-page .centres-search-field select {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: 48px;
+
+  margin: 0;
+  padding: 0 14px;
+
+  border: 1px solid #d8e5f1;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #fbfdff;
+  color: #173c5c;
+
+  font-size: 14px;
+  line-height: normal;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Input focus */
+.centres-page .centres-search-field input:focus,
+.centres-page .centres-search-field select:focus {
+  border-color: #0870f9;
+
+  box-shadow: 0 0 0 3px rgba(8, 112, 249, 0.1);
+}
+
+/* =========================================
+   RESULTS HEADING
+========================================= */
+
+.centres-page .centres-results-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 100%;
+
+  gap: 20px;
+
+  margin: 38px 0 24px;
+  padding: 0;
+}
+
+/* Results title */
+.centres-page .centres-results-heading h2 {
+  margin: 0 0 8px;
+  padding: 0;
+
+  color: #123976;
+
+  font-size: 27px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+/* Results subtitle */
+.centres-page .centres-results-heading p {
+  margin: 0;
+  padding: 0;
+
+  color: #71869e;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Request centre button */
+.centres-page .centres-request-button,
+.centres-page .centres-empty-state button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 45px;
+
+  margin: 0;
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #0870f9;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.4;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.centres-page .centres-request-button:hover,
+.centres-page .centres-empty-state button:hover {
+  background: #075bd4;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   HOSPITALS AND CLINICS GRID
+========================================= */
+
+.centres-page .centres-directory-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 100%;
+
+  gap: 24px;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual centre card */
+.centres-page .centre-directory-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 24px;
+
+  border: 1px solid #e0edf9;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 20px rgba(24, 73, 120, 0.045);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Card hover */
+.centres-page .centre-directory-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 28px rgba(24, 73, 120, 0.1);
+}
+
+/* Card top row */
+.centres-page .centre-card-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-width: 0;
+
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Hospital icon */
+.centres-page .centre-hospital-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 48px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 13px;
+
+  background: #e7f3ff;
+  color: #0870f9;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Hospital type badge */
+.centres-page .centre-type-badge {
+  display: inline-block;
+
+  max-width: 70%;
+
+  margin: 0;
+  padding: 7px 10px;
+
+  border-radius: 20px;
+
+  background: #f0f7ff;
+  color: #35628f;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.5;
+  text-align: center;
+
+  overflow-wrap: anywhere;
+}
+
+/* Hospital name */
+.centres-page .centre-directory-card h3 {
+  margin: 19px 0 7px;
+  padding: 0;
+
+  color: #123976;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  line-height: 1.45;
+
+  overflow-wrap: anywhere;
+}
+
+/* Hospital area */
+.centres-page .centre-area {
+  margin: 0 0 16px;
+  padding: 0;
+
+  color: #0870f9;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   ADDRESS AND PHONE DETAILS
+========================================= */
+
+.centres-page .centre-detail-row {
+  display: grid;
+
+  grid-template-columns: 20px minmax(0, 1fr);
+
+  align-items: start;
+
+  width: 100%;
+  min-width: 0;
+
+  gap: 9px;
+
+  margin: 8px 0;
+  padding: 0;
+}
+
+/* Detail icon */
+.centres-page .centre-detail-row span {
+  display: inline-block;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Detail text */
+.centres-page .centre-detail-row p {
+  min-width: 0;
+
+  margin: 0;
+  padding: 0;
+
+  color: #617992;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* =========================================
+   VACCINE INFORMATION
+========================================= */
+
+.centres-page .centre-vaccines {
+  width: 100%;
+  min-width: 0;
+
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+/* Vaccine section title */
+.centres-page .centre-vaccines h4 {
+  margin: 0 0 12px;
+  padding: 0;
+
+  color: #173c5c;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1.5;
+}
+
+/* Vaccine tags wrapper */
+.centres-page .vaccine-tags {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+  min-width: 0;
+
+  gap: 7px;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual vaccine tag */
+.centres-page .vaccine-tags span {
+  display: inline-block;
+
+  max-width: 100%;
+
+  margin: 0;
+  padding: 7px 9px;
+
+  border: 1px solid #dcecfb;
+  border-radius: 8px;
+
+  background: #f4f9ff;
+  color: #315b83;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+/* Availability note */
+.centres-page .centre-availability-note {
+  margin: 16px 0;
+  padding: 0;
+
+  color: #7a8da2;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+/* Source link */
+.centres-page .centre-source-link {
+  display: inline-block;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 0 16px;
+  padding: 0;
+
+  color: #0870f9;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.6;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+}
+
+.centres-page .centre-source-link:hover {
+  color: #075bd4;
+  text-decoration: underline;
+}
+
+/* =========================================
+   CARD ACTION BUTTON
+========================================= */
+
+.centres-page .centre-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 44px;
+
+  margin-top: auto;
+  padding: 12px 14px;
+
+  border: 1px solid #0870f9;
+  border-radius: 9px;
+
+  background: #0870f9;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.5;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.centres-page .centre-card-action:hover {
+  border-color: #075bd4;
+  background: #075bd4;
+}
+
+/* =========================================
+   EMPTY SEARCH RESULTS
+========================================= */
+
+.centres-page .centres-empty-state {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 50px 24px;
+
+  border: 1px dashed #cbdff4;
+  border-radius: 15px;
+
+  background: #fbfdff;
+
+  text-align: center;
+}
+
+.centres-page .centres-empty-state h3 {
+  margin: 0 0 12px;
+  padding: 0;
+
+  color: #123976;
+
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.centres-page .centres-empty-state p {
+  margin: 0 0 20px;
+  padding: 0;
+
+  color: #71869e;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   MEDICAL INFORMATION NOTICE
+========================================= */
+
+.centres-page .centres-medical-notice {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 30px 0 0;
+  padding: 18px 20px;
+
+  border: 1px solid #f1dfad;
+  border-radius: 11px;
+
+  background: #fffaf0;
+  color: #755c22;
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.centres-page .centres-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 35px 24px 25px;
+
+  border-top: 1px solid #e0edf9;
+
+  background: #f7fbff;
+
+  text-align: center;
+}
+
+/* Footer title */
+.centres-page .centres-footer strong {
+  display: block;
+
+  margin: 0 0 10px;
+  padding: 0;
+
+  color: #123976;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  line-height: 1.5;
+}
+
+/* Footer description */
+.centres-page .centres-footer p {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  color: #71869e;
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* Footer navigation */
+.centres-page .centres-footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 100%;
+
+  gap: 24px;
+
+  margin: 20px 0;
+  padding: 0;
+}
+
+/* Footer links */
+.centres-page .centres-footer-links a {
+  display: inline-block;
+
+  margin: 0;
+  padding: 5px 0;
+
+  color: #123976;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.centres-page .centres-footer-links a:hover {
+  color: #0870f9;
+}
+
+/* Footer copyright */
+.centres-page .centres-footer small {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  color: #91a3b3;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   LARGE LAPTOPS
+========================================= */
+
+@media (min-width: 1400px) {
+  .centres-page .centres-navbar {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .centres-page .centres-main {
+    max-width: 1360px;
+  }
+
+  .centres-page .centres-directory-grid {
+    gap: 28px;
+  }
+}
+
+/* =========================================
+   SMALL LAPTOPS
+========================================= */
+
+@media (max-width: 1100px) {
+  .centres-page .centres-navbar {
+    padding-right: 3%;
+    padding-left: 3%;
+    gap: 18px;
+  }
+
+  .centres-page .centres-logo {
+    max-width: 48%;
+  }
+
+  .centres-page .logo-text h2 {
+    font-size: 15px;
+  }
+
+  .centres-page .home-nav-links {
+    gap: 20px;
+  }
+
+  .centres-page .home-nav-links a {
+    font-size: 14px;
+  }
+
+  .centres-page .centres-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .centres-page .centres-main {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 768px) {
+  .centres-page .centres-navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: auto;
+
+    padding: 16px 20px;
+
+    gap: 12px;
+  }
+
+  .centres-page .centres-logo {
+    justify-content: center;
+
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .centres-page .logo-text h2 {
+    font-size: 16px;
+  }
+
+  .centres-page .home-nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 100%;
+
+    flex-wrap: wrap;
+
+    gap: 10px 25px;
+  }
+
+  .centres-page .home-nav-links a {
+    min-height: 38px;
+    padding: 7px 0;
+
+    font-size: 14px;
+  }
+
+  .centres-page .centres-hero {
+    min-height: auto;
+    padding: 55px 22px;
+  }
+
+  .centres-page .centres-hero h1 {
+    max-width: 650px;
+    font-size: 38px;
+  }
+
+  .centres-page .centres-hero p {
+    font-size: 16px;
+  }
+
+  .centres-page .centres-main {
+    padding: 32px 22px 48px;
+  }
+
+  .centres-page .centres-search-panel {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .centres-page .centres-results-heading {
+    margin-top: 30px;
+  }
+
+  .centres-page .centres-results-heading h2 {
+    font-size: 24px;
+  }
+
+  .centres-page .centres-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .centres-page .centre-directory-card {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   MOBILE PHONES
+========================================= */
+
+@media (max-width: 520px) {
+  .centres-page .centres-navbar {
+    padding: 14px 12px;
+  }
+
+  .centres-page .centres-logo {
+    gap: 9px;
+  }
+
+  .centres-page .logo-shield {
+    flex-basis: 38px;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+    font-size: 23px;
+  }
+
+  .centres-page .logo-text h2 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .centres-page .home-nav-links {
+    gap: 6px 20px;
+  }
+
+  .centres-page .home-nav-links a {
+    min-height: 35px;
+    font-size: 13px;
+  }
+
+  .centres-page .centres-hero {
+    padding: 42px 17px;
+  }
+
+  .centres-page .centres-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .centres-page .centres-hero h1 {
+    margin-top: 12px;
+    margin-bottom: 14px;
+
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.4px;
+  }
+
+  .centres-page .centres-hero p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .centres-page .centres-hero-badge {
+    margin-top: 19px;
+    padding: 9px 12px;
+
+    font-size: 11px;
+  }
+
+  .centres-page .centres-main {
+    padding: 25px 15px 40px;
+  }
+
+  .centres-page .centres-search-panel {
+    padding: 17px;
+    gap: 16px;
+
+    border-radius: 12px;
+  }
+
+  .centres-page .centres-search-field label {
+    font-size: 13px;
+  }
+
+  .centres-page .centres-search-field input,
+  .centres-page .centres-search-field select {
+    height: 45px;
+    font-size: 13px;
+  }
+
+  .centres-page .centres-results-heading {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin: 28px 0 20px;
+  }
+
+  .centres-page .centres-results-heading h2 {
+    font-size: 23px;
+  }
+
+  .centres-page .centres-results-heading p {
+    font-size: 12px;
+  }
+
+  .centres-page .centres-request-button {
+    width: 100%;
+  }
+
+  .centres-page .centres-directory-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+  }
+
+  .centres-page .centre-directory-card {
+    padding: 20px;
+    border-radius: 13px;
+  }
+
+  .centres-page .centre-directory-card h3 {
+    font-size: 18px;
+  }
+
+  .centres-page .centre-detail-row p {
+    font-size: 12px;
+  }
+
+  .centres-page .centres-medical-notice {
+    padding: 14px;
+    font-size: 12px;
+  }
+
+  .centres-page .centres-footer {
+    padding: 28px 16px 22px;
+  }
+
+  .centres-page .centres-footer-links {
+    gap: 12px 20px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+  .centres-page .logo-text h2 {
+    font-size: 12px;
+  }
+
+  .centres-page .home-nav-links {
+    gap: 5px 14px;
+  }
+
+  .centres-page .home-nav-links a {
+    font-size: 12px;
+  }
+
+  .centres-page .centres-hero h1 {
+    font-size: 28px;
+  }
+
+  .centres-page .centres-main {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .centres-page .centre-directory-card {
+    padding: 16px;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .centres-page *,
+  .centres-page *::before,
+  .centres-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* =========================================
+   DESKTOP LAYOUT FIX — CENTRES PAGE
+========================================= */
+
+@media (min-width: 769px) {
+  /* Main page must use the full browser width */
+  .centres-page {
+    display: block !important;
+    position: relative;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: clip;
+  }
+
+  /* Desktop navigation */
+  .centres-page .centres-navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 80px !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 14px 5% !important;
+    gap: 30px !important;
+
+    flex-wrap: nowrap !important;
+  }
+
+  /* Logo */
+  .centres-page .centres-logo {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: 50% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 12px !important;
+  }
+
+  .centres-page .logo-text {
+    min-width: 0 !important;
+  }
+
+  .centres-page .logo-text h2 {
+    margin: 0 !important;
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Keep navigation links in one horizontal row */
+  .centres-page .home-nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 30px !important;
+
+    flex-wrap: nowrap !important;
+  }
+
+  .centres-page .home-nav-links a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: auto !important;
+    min-width: max-content !important;
+    min-height: 44px !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 8px 0 !important;
+
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+  }
+
+  .centres-page .home-nav-links a.active::after {
+    bottom: 0 !important;
+    height: 3px !important;
+  }
+
+  /* Hero spans the full screen */
+  .centres-page .centres-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 360px !important;
+
+    margin: 0 !important;
+    padding: 65px 30px !important;
+
+    text-align: center !important;
+  }
+
+  .centres-page .centres-hero h1 {
+    width: 100% !important;
+    max-width: 850px !important;
+    margin: 12px auto 18px !important;
+    font-size: clamp(36px, 3.5vw, 52px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .centres-page .centres-hero p {
+    width: 100% !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+
+  /* Main content stays centred and readable */
+  .centres-page .centres-main {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 1280px !important;
+    min-width: 0 !important;
+
+    margin: 0 auto !important;
+    padding: 42px 30px 65px !important;
+  }
+
+  /* Search fields remain side by side */
+  .centres-page .centres-search-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    gap: 22px !important;
+    padding: 25px !important;
+  }
+
+  /* Three evenly sized cards on desktop */
+  .centres-page .centres-directory-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    gap: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .centres-page .centre-directory-card {
+    display: flex !important;
+    flex-direction: column !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 24px !important;
+  }
+
+  /* Footer uses full width */
+  .centres-page .centres-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 35px 24px 25px !important;
+  }
+}
+
+/* Smaller desktop and tablet landscape */
+@media (min-width: 769px) and (max-width: 1050px) {
+  .centres-page .centres-navbar {
+    padding-right: 3% !important;
+    padding-left: 3% !important;
+    gap: 18px !important;
+  }
+
+  .centres-page .logo-text h2 {
+    font-size: 14px !important;
+  }
+
+  .centres-page .home-nav-links {
+    gap: 18px !important;
+  }
+
+  .centres-page .home-nav-links a {
+    font-size: 13px !important;
+  }
+
+  .centres-page .centres-main {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+
+  .centres-page .centres-directory-grid {
+    gap: 18px !important;
+  }
+
+  .centres-page .centre-directory-card {
+    padding: 18px !important;
+  }
+}

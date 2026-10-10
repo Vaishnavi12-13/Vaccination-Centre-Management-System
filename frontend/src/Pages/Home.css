@@ -1,0 +1,587 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  border-top: 7px solid #064477;
+  background: #ffffff;
+  color: #071c43;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-page button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+.home-navbar {
+  width: 100%;
+  height: 75px;
+  padding: 0 5.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: #ffffff;
+  border-bottom: 1px solid #e7edf5;
+}
+
+.home-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.logo-shield {
+  width: 43px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(145deg, #078bff, #0750bd);
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  clip-path: polygon(
+    50% 0%,
+    100% 17%,
+    100% 57%,
+    84% 80%,
+    50% 100%,
+    16% 80%,
+    0% 57%,
+    0% 17%
+  );
+}
+
+.logo-text h2 {
+  margin: 0;
+  color: #123976;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+
+/* Navigation links */
+
+.home-nav-links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.home-nav-links a {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #092650;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.home-nav-links a:hover,
+.home-nav-links a.active {
+  color: #0868ff;
+}
+
+.home-nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: #0868ff;
+}
+
+
+/* ================================
+   HERO BACKGROUND
+================================ */
+
+.home-hero {
+  width: 100%;
+  min-height: 470px;
+  padding: 35px 7.2%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  background-color: #d9f0ff;
+  background-image: url("/images/vaccination-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  width: 65%;
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ================================
+   HERO TEXT
+================================ */
+
+.hero-content h1 {
+  margin: 0 0 20px;
+  font-size: clamp(34px, 4.1vw, 58px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.3px;
+}
+
+.title-blue {
+  color: #0868ff;
+}
+
+.title-dark {
+  color: #071a40;
+}
+
+.hero-content h2 {
+  margin: 0 0 12px;
+  color: #071a40;
+  font-size: clamp(23px, 2.4vw, 34px);
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.hero-content > p {
+  margin: 0;
+  max-width: 620px;
+  color: #294d79;
+  font-size: clamp(15px, 1.6vw, 22px);
+  line-height: 1.5;
+}
+
+
+/* ================================
+   PATIENT BUTTONS
+================================ */
+
+.hero-button-row {
+  width: 100%;
+  max-width: 610px;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.patient-login-btn,
+.patient-register-btn {
+  min-width: 0;
+  min-height: 58px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-size: clamp(14px, 1.3vw, 19px);
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(20, 70, 130, 0.12);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.patient-login-btn:hover,
+.patient-register-btn:hover {
+  transform: translateY(-2px);
+}
+
+.patient-login-btn {
+  background: #0870f9;
+  border-color: #398cff;
+}
+
+.patient-login-btn:hover {
+  background: #075bd4;
+}
+
+.patient-register-btn {
+  background: #08b96b;
+  border-color: #19c67c;
+}
+
+.patient-register-btn:hover {
+  background: #079c5a;
+}
+
+.button-icon {
+  font-size: 23px;
+  line-height: 1;
+}
+
+
+/* ================================
+   ADMIN LOGIN
+================================ */
+
+.admin-login-btn {
+  width: 100%;
+  max-width: 610px;
+  min-height: 57px;
+  margin-top: 12px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  border: 1px solid #d6e8fb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #10417e;
+  font-size: clamp(15px, 1.35vw, 20px);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(22, 91, 160, 0.12);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-login-btn:hover {
+  background: #f2f8ff;
+  transform: translateY(-2px);
+}
+
+.admin-shield {
+  width: 32px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(145deg, #087bff, #0753c5);
+  color: #ffffff;
+  font-size: 22px;
+  clip-path: polygon(
+    50% 0%,
+    100% 17%,
+    100% 57%,
+    84% 80%,
+    50% 100%,
+    16% 80%,
+    0% 57%,
+    0% 17%
+  );
+}
+
+
+/* ================================
+   BOTTOM FEATURES
+================================ */
+
+.home-features {
+  width: 100%;
+  min-height: 125px;
+  padding: 18px 4%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  background: linear-gradient(110deg, #ffffff, #f5faff);
+}
+
+.feature-item {
+  min-width: 0;
+  min-height: 90px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-right: 1px solid #cbdff4;
+}
+
+.feature-item:last-child {
+  border-right: none;
+}
+
+.feature-icon {
+  width: 58px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #e6f3ff;
+  color: #0868ff;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+.feature-item h3 {
+  margin: 0;
+  color: #081e49;
+  font-size: clamp(12px, 1.25vw, 17px);
+  font-weight: 700;
+  text-align: center;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .home-navbar {
+    padding: 0 4%;
+    gap: 15px;
+  }
+
+  .logo-shield {
+    width: 38px;
+    height: 43px;
+    font-size: 24px;
+  }
+
+  .logo-text h2 {
+    font-size: 14px;
+  }
+
+  .home-nav-links {
+    gap: 20px;
+  }
+
+  .home-nav-links a {
+    font-size: 13px;
+  }
+
+  .home-hero {
+    min-height: 450px;
+    padding: 30px 5%;
+    background-position: center;
+  }
+
+  .hero-content {
+    width: 68%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(32px, 4.5vw, 43px);
+  }
+
+  .hero-content h2 {
+    font-size: 24px;
+  }
+
+  .hero-content > p {
+    font-size: 16px;
+  }
+
+  .patient-login-btn,
+  .patient-register-btn {
+    min-height: 52px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .admin-login-btn {
+    min-height: 52px;
+  }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .home-page {
+    border-top-width: 5px;
+  }
+
+  .home-navbar {
+    height: auto;
+    min-height: 100px;
+    padding: 13px 5%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .home-logo {
+    gap: 10px;
+  }
+
+  .logo-text h2 {
+    font-size: 15px;
+  }
+
+  .home-nav-links {
+    width: 100%;
+    height: 35px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .home-nav-links a {
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .home-nav-links a.active::after {
+    bottom: 0;
+    height: 3px;
+  }
+
+  .home-hero {
+    min-height: 520px;
+    padding: 30px 5%;
+    align-items: flex-start;
+    background-position: 62% center;
+  }
+
+  .home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(222, 242, 255, 0.94),
+      rgba(222, 242, 255, 0.76) 70%,
+      rgba(222, 242, 255, 0.25)
+    );
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 18px;
+    font-size: clamp(29px, 7.5vw, 38px);
+    letter-spacing: -0.7px;
+  }
+
+  .hero-content h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .hero-button-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .patient-login-btn,
+  .patient-register-btn {
+    width: 100%;
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .admin-login-btn {
+    min-height: 50px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+
+  .home-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 12px 3%;
+  }
+
+  .feature-item {
+    min-height: 100px;
+    border-right: none;
+    border-bottom: 1px solid #dbe8f6;
+  }
+
+  .feature-item:nth-child(odd) {
+    border-right: 1px solid #dbe8f6;
+  }
+
+  .feature-item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 44px;
+    font-size: 27px;
+  }
+
+  .feature-item h3 {
+    font-size: 12px;
+  }
+}
+/* ================================
+   NAVIGATION FOR SEPARATE PAGES
+================================ */
+
+.home-nav-links a {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.home-nav-links a:hover {
+  color: #0868ff;
+}
+
+/* Active page underline */
+.home-nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: #0868ff;
+}
+
+/* Mobile navigation underline */
+@media (max-width: 600px) {
+  .home-nav-links a.active::after {
+    bottom: 0;
+  }
+}

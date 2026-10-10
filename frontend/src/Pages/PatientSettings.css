@@ -1,0 +1,174 @@
+/* Main Settings Page */
+.settings-page {
+  min-height: 100vh;
+  background: #f4f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Settings Card */
+.settings-card {
+  width: 100%;
+  max-width: 700px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Header */
+.settings-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.settings-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.settings-header h1 {
+  color: #003366;
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.settings-header p {
+  color: #6b7280;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Sections */
+.settings-section {
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 22px;
+}
+
+.settings-section h3 {
+  color: #003366;
+  font-size: 18px;
+  margin: 0 0 20px;
+}
+
+/* Notification Option */
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.settings-option h4 {
+  color: #263445;
+  font-size: 15px;
+  margin: 0 0 7px;
+}
+
+.settings-option p {
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Toggle Switch */
+.settings-toggle {
+  position: relative;
+  display: inline-block;
+  min-width: 48px;
+  width: 48px;
+  height: 26px;
+}
+
+.settings-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.settings-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #cbd5e1;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.settings-slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.settings-toggle input:checked + .settings-slider {
+  background: #003366;
+}
+
+.settings-toggle input:checked + .settings-slider::before {
+  transform: translateX(22px);
+}
+
+/* Account Information */
+.settings-account p {
+  color: #4b5563;
+  font-size: 14px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.settings-account strong {
+  color: #263445;
+}
+
+/* Back Button */
+.settings-back-btn {
+  display: block;
+  width: 100%;
+  background: #003366;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.settings-back-btn:hover {
+  background: #004b8d;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .settings-card {
+    padding: 22px 18px;
+  }
+
+  .settings-header h1 {
+    font-size: 25px;
+  }
+
+  .settings-section {
+    padding: 18px;
+  }
+
+  .settings-option {
+    align-items: flex-start;
+  }
+}
